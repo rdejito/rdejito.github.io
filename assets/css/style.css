@@ -743,7 +743,7 @@ header {
   transform: translateY(-3px);
 }
 
-.certificates a {
+.certificates .cert-detail {
   display: flex;
   align-items: start;
   justify-content: space-between;
@@ -753,10 +753,28 @@ header {
   line-height: 1.5;
 }
 
-.certificates a .icon {
-  width: 16px;
-  height: 16px;
+.cert-category {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 3px 9px;
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
   color: #5fa8a8;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cert-name {
+  margin: 0;
+}
+
+.cert-note {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 400;
 }
 
 .cert-icons {
