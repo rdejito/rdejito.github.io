@@ -5,9 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Redirecting...</title>
     <script>
-      location.replace(
-        'index.html?route=' + encodeURIComponent(location.pathname + location.search),
-      );
+      (function () {
+        var l = location;
+        var route = l.pathname + l.search + l.hash;
+        var base = sessionStorage.getItem('spa-base');
+
+        if (base === null) {
+          var parts = l.pathname.split('/').filter(Boolean);
+          var isGh = l.hostname.endsWith('.github.io');
+          // GitHub project pages: /<repo>/... ; root/custom domains: /
+          base = isGh && parts.length > 1 ? '/' + parts[0] : '';
+          // Single-segment path on github.io is ambiguous; prefer root for known app routes.
+          if (isGh && parts.length === 1) base = '';
+        }
+
+        l.replace(l.origin + base + '/index.html?route=' + encodeURIComponent(route));
+      })();
     </script>
   </head>
   <body></body>

@@ -48,6 +48,8 @@ const fallback = {
 
 history.scrollRestoration = 'manual';
 
+if (BASE) sessionStorage.setItem('spa-base', BASE);
+
 const redirected = new URLSearchParams(location.search).get('route');
 if (redirected) history.replaceState({}, '', redirected);
 
