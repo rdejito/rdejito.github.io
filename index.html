@@ -1,326 +1,667 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rainiel Dejito | Digital Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script type="module" src="assets/js/main.js"></script>
+  </head>
+  <body>
+    <!-- Custom icon system. Every icon uses currentColor, so it is themeable via CSS. -->
+    <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol
+        id="icon-arrow-up-right"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M7 17 17 7M8 7h9v9" />
+      </symbol>
+      <symbol
+        id="icon-arrow-right"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M4 12h16m-6-6 6 6-6 6" />
+      </symbol>
+      <symbol
+        id="icon-chevron"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="m6 9 6 6 6-6" />
+      </symbol>
+      <symbol
+        id="icon-download"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M12 3v12m-4-4 4 4 4-4M4 19h16" />
+      </symbol>
+      <symbol
+        id="icon-linkedin"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <rect x="3" y="3" width="18" height="18" rx="3" />
+        <path d="M8 10v6M8 7.5v.5M12 16v-3.5a2 2 0 0 1 4 0V16" />
+      </symbol>
+      <symbol
+        id="icon-discord"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M8 8a11 11 0 0 1 8 0l1 1.5a8 8 0 0 1 1.5 5L18 17l-2-1.5M8 8 7 9.5A8 8 0 0 0 5.5 15L7 17l2-1.5"
+        />
+        <path d="M9 12v1m6-1v1" />
+      </symbol>
+      <symbol
+        id="icon-mail"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <path d="m3 7 9 6 9-6" />
+      </symbol>
+      <symbol
+        id="icon-pin"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z" />
+        <circle cx="12" cy="10" r="2.5" />
+      </symbol>
+      <symbol
+        id="icon-phone"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M6 3h3l2 5-2.5 1.5a12 12 0 0 0 6 6L16 13l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 3-2Z"
+        />
+      </symbol>
+      <symbol
+        id="icon-quote"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M9 6c-3 1.5-4 4-4 7h4v5H4v-5c0-4 2-7 5-7Zm11 0c-3 1.5-4 4-4 7h4v5h-5v-5c0-4 2-7 5-7Z"
+        />
+      </symbol>
+      <symbol
+        id="icon-award"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="12" cy="9" r="5" />
+        <path d="m9 14-1.5 7L12 18l4.5 3L15 14" />
+      </symbol>
+      <symbol
+        id="icon-cpu"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <rect x="6" y="6" width="12" height="12" rx="2" />
+        <rect x="9" y="9" width="6" height="6" rx="1" />
+        <path d="M9 2v4m6-4v4M9 18v4m6-4v4M2 9h4m-4 6h4m12-6h4m-4 6h4" />
+      </symbol>
+      <symbol
+        id="icon-layers"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5" />
+      </symbol>
+      <symbol
+        id="icon-bolt"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="m13 2-9 12h7l-1 8 9-12h-7l1-8Z" />
+      </symbol>
+      <symbol
+        id="icon-gear"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="12" cy="12" r="3" />
+        <path d="M12 2v3m0 14v3M2 12h3m14 0h3M5 5l2 2m10 10 2 2M19 5l-2 2M7 17l-2 2" />
+      </symbol>
+      <symbol
+        id="icon-brackets"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="m9 8-5 4 5 4M15 8l5 4-5 4" />
+      </symbol>
+      <symbol
+        id="icon-hash"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M9 3 7 21M17 3l-2 18M4 9h16M3 15h16" />
+      </symbol>
+      <symbol
+        id="icon-camera"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M4 8h3l2-3h6l2 3h3v11H4z" />
+        <circle cx="12" cy="13" r="4" />
+      </symbol>
+      <symbol
+        id="icon-scissors"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="6" cy="6" r="2" />
+        <circle cx="6" cy="18" r="2" />
+        <path d="M8 8l12 10M8 16 20 6" />
+      </symbol>
+      <symbol
+        id="icon-palette"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M12 3a9 9 0 1 0 0 18h2a2 2 0 0 0 1.5-3.3 2 2 0 0 1 1.5-3.2H19a2 2 0 0 0 2-2A9 9 0 0 0 12 3Z"
+        />
+        <path d="M8 10h.01" />
+      </symbol>
+      <symbol
+        id="icon-book"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M4 5h7a3 3 0 0 1 3 3v11a3 3 0 0 0-3-3H4zM20 5h-3a3 3 0 0 0-3 3v11a3 3 0 0 1 3-3h3z"
+        />
+      </symbol>
+      <symbol
+        id="icon-spark"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M12 3v6m0 6v6M3 12h6m6 0h6M6 6l3 3m6 6 3 3m0-12-3 3m-6 6-3 3" />
+      </symbol>
+      <symbol
+        id="icon-hands"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M7 11V6a1.5 1.5 0 0 1 3 0v4m0 0V5a1.5 1.5 0 0 1 3 0v5m0 0V7a1.5 1.5 0 0 1 3 0v6m0 0 2-2a1.5 1.5 0 0 1 2 2l-3 6a4 4 0 0 1-4 2h-3a4 4 0 0 1-3-1.5l-3-4a1.5 1.5 0 0 1 2-2l1 1"
+        />
+      </symbol>
+      <symbol
+        id="icon-coffee"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M4 8h13v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4zM17 9h2a2 2 0 0 1 0 4h-2M7 3v3m4-3v3" />
+      </symbol>
+    </svg>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rainiel Dejito | Professional Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>                                                                                                                                                    
+    <div id="scroll-progress" aria-hidden="true"></div>
 
-<body>
     <header>
-        <a href="#home" class="logo" title="Home">R.</a>
-        <nav>
-            <ul class="navigation">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#aboutme" class="nav-link">About Me</a></li>
-                <li><a href="#experience" class="nav-link">Experiences</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
+      <a href="./" class="logo" title="Home">R<span>.</span></a>
+
+      <nav id="primary-nav" aria-label="Main navigation">
+        <ul class="navigation">
+          <li><a href="./" class="nav-link">Work</a></li>
+          <li><a href="about" class="nav-link">About</a></li>
+          <li><a href="contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </header>
-    <main>
-        <div class="home" id="home">
-            <div class="hero" id="section-inner">
-                <h1>Hi, I'm Rainiel</h1><br>
-                <span class="typing-animation" id="typed-text"></span>
 
+    <main id="app"></main>
 
-                <div class="socials">
-                    <a href="assets/media/cv/Dejito_Updated_Resume.pdf" id="cv" target="_blank" download>Download CV</a>
-                    <div id="line-link"></div>
-                    <a href="https://www.linkedin.com/in/rainiel-dejito-b60288394" target="_blank"><img src="assets/media/home-images/mynaui--linkedin.png" alt="LinkedIn" title="LinkedIn" ></a>
-                    <a href="https://discord.com/users/1470002070445756478" target="_blank"><img src="assets/media/home-images/arcticons--discord-alt-6.png" alt="Discord" title="Discord"></a>
-                </div>
-            </div>
+    <!-- Home: opening statement + work section -->
+    <template id="view-home">
+      <div class="home">
+        <section class="opening" id="top">
+          <p class="eyebrow">Available for projects</p>
+          <h1 class="display">Rainiel builds <span class="outline">digital</span> things</h1>
+          <p class="lede">
+            Computer Engineering Technology student who likes building things that live on screens.
+            From web interfaces to the hardware behind them, I'm curious about how things work — and
+            how to make them better.
+          </p>
+          <a class="outline-button" href="#work">
+            See the work
+            <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+          </a>
+        </section>
 
-            <div id="line"></div>
+        <section class="work" id="work">
+          <div class="section-head">
+            <span class="section-index">01 / Selected Work</span>
+            <h2>Selected work</h2>
+          </div>
+          <ol class="project-list" id="project-list"></ol>
+          <div class="project-preview" aria-hidden="true">
+            <span class="preview-title"></span>
+            <span class="preview-desc"></span>
+          </div>
+        </section>
+      </div>
+    </template>
 
-            <div class="hero-img">
-                <img src="assets/media/home-images/Mee.png" alt="My Image">
-            </div>
-        </div>
+    <!-- About: profile, skills, certificates, tech stack, experience -->
+    <template id="view-about">
+      <div class="aboutme">
+        <section class="about-intro section-block">
+          <p class="section-index">02 / About</p>
+          <h2 class="display display--sm">Curious about me?</h2>
+          <div class="para">
+            <svg class="icon" aria-hidden="true"><use href="#icon-quote"></use></svg>
+            <p id="details">
+              Diploma in Computer Engineering student at CITE Technical Institute Inc.. I enjoy
+              building things that live on screens and bringing ideas to life through code. From
+              tinkering with hardware and fixing systems to exploring Java and web development, I’ve
+              always been curious about how things work—and how to make them better. My portfolio is
+              a mix of projects that reflect both my technical skills and my passion for learning,
+              creating, and problem-solving.
+            </p>
+          </div>
+        </section>
 
-        <div class="aboutme" id="aboutme">
-            <div class="sidebar">
-                <img src="assets/media/about-images/Mee.png" alt="My image">
-                
-                <div class="skills">
-                    <div class="personal-info">
-                        <h2>Rainiel A. Dejito</h2>
-                        <p>19 | September 27</p>
-                        <p>Alcoy, Cebu</p>
-                    </div>
-                    <div class="softSkills">
-                        <h3 class="skillHead">Non-Technical Skills</h3>
-                        <ul>
-                            <li>Communication</li>
-                            <li>Teamwork</li>
-                            <li>Problem-solving</li>
-                        </ul>
-                    </div>
-                    <div class="interest">
-                        <h3 class="skillHead">Interest / Hobbies</h3>
-                        <ul>
-                            <li>Photography</li>
-                            <li>Coding</li>
-                            <li>Editing</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="descriptions" id="section-inner">
-                <h2>Curious about me?</h2>
-                <div class="para">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
-                        <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
-                            <path d="M9.713 3.64c.581-.495.872-.743 1.176-.888a2.58 2.58 0 0 1 2.222 0c.304.145.595.393 1.176.888c.599.51 1.207.768 2.007.831c.761.061 1.142.092 1.46.204c.734.26 1.312.837 1.571 1.572c.112.317.143.698.204 1.46c.063.8.32 1.407.83 2.006c.496.581.744.872.889 1.176c.336.703.336 1.52 0 2.222c-.145.304-.393.595-.888 1.176a3.3 3.3 0 0 0-.831 2.007c-.061.761-.092 1.142-.204 1.46a2.58 2.58 0 0 1-1.572 1.571c-.317.112-.698.143-1.46.204c-.8.063-1.407.32-2.006.83c-.581.496-.872.744-1.176.889a2.58 2.58 0 0 1-2.222 0c-.304-.145-.595-.393-1.176-.888a3.3 3.3 0 0 0-2.007-.831c-.761-.061-1.142-.092-1.46-.204a2.58 2.58 0 0 1-1.571-1.572c-.112-.317-.143-.698-.204-1.46a3.3 3.3 0 0 0-.83-2.006c-.496-.581-.744-.872-.89-1.176a2.58 2.58 0 0 1 .001-2.222c.145-.304.393-.595.888-1.176c.52-.611.769-1.223.831-2.007c.061-.761.092-1.142.204-1.46a2.58 2.58 0 0 1 1.572-1.571c.317-.112.698-.143 1.46-.204a3.3 3.3 0 0 0 2.006-.83" />
-                            <path d="M12 16v-5h-.5m0 5h1M12 8.5V8" />
-                        </g>
-                    </svg>
-                    <p id="details">Diploma in Computer Engineering student at CITE Technical Institute Inc.. I enjoy
-                        building things that live on screens and bringing ideas to life through code. From tinkering with
-                        hardware and fixing systems to exploring Java and web development, I’ve always been curious about
-                        how things work—and how to make them better. My portfolio is a mix of projects that reflect both my
-                        technical skills and my passion for learning, creating, and problem-solving.</p>
-                </div>
-
-                <h3 id="achv-cert">Achievements & Certificates</h3>
-                <ul class="certificates">
-                    <li>
-                        <a href="assets/media/cert/CSS.pdf" target="_blank">Computer System Servicing NCII <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20">
-                                <g fill="#000">
-                                    <rect width="11" height="11" x="7" y="6" opacity="0.2" rx="1" />
-                                    <path d="M14.5 14.5v-3.25a.5.5 0 0 1 1 0V15a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 1 .5-.5h3.75a.5.5 0 0 1 0 1H5.5v9z" />
-                                    <path d="M10.354 10.354a.5.5 0 0 1-.708-.708l5-5a.5.5 0 0 1 .708.708z" />
-                                    <path d="M15.5 8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 1 0z" />
-                                    <path d="M11.5 5.5a.5.5 0 0 1 0-1H15a.5.5 0 0 1 0 1z" />
-                                </g>
-                            </svg></span></a>
-                        <div class="cert-icons">
-                            <img src="assets/media/about-images/cert-icons/computer.png" alt="computer">
-                            <img src="assets/media/about-images/cert-icons/microprocessor.png" alt="microprocessor">
-                            <img src="assets/media/about-images/cert-icons/motherboard.png" alt="motherboard">
-                        </div>
-                    </li>
-                    <li>
-                        <a href="assets/media/cert/EPAS.pdf" target="_blank">Electronic Product Assembly and Servicing  NCII <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20">
-                                <g fill="#000">
-                                    <rect width="11" height="11" x="7" y="6" opacity="0.2" rx="1" />
-                                    <path d="M14.5 14.5v-3.25a.5.5 0 0 1 1 0V15a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 1 .5-.5h3.75a.5.5 0 0 1 0 1H5.5v9z" />
-                                    <path d="M10.354 10.354a.5.5 0 0 1-.708-.708l5-5a.5.5 0 0 1 .708.708z" />
-                                    <path d="M15.5 8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 1 0z" />
-                                    <path d="M11.5 5.5a.5.5 0 0 1 0-1H15a.5.5 0 0 1 0 1z" />
-                                </g>
-                            </svg></span></a>
-                        <div class="cert-icons">
-                            <img src="assets/media/about-images/cert-icons/resistor.png" alt="resistor">
-                            <img src="assets/media/about-images/cert-icons/diode-bridge.png" alt="diode-bridge">
-                            <img src="assets/media/about-images/cert-icons/electrical-component.png" alt="circuit">
-                        </div>
-                    </li>
+        <section class="profile section-block">
+          <div class="sidebar">
+            <img src="assets/media/about-images/Mee.jpeg" alt="Portrait of Rainiel" />
+            <div class="skills">
+              <div class="personal-info">
+                <h2>Rainiel Dejito</h2>
+                <p class="personal-meta">20 &nbsp;·&nbsp; September 27</p>
+                <p class="location">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-pin"></use></svg>
+                  Mandaue City, Cebu
+                </p>
+              </div>
+              <div class="softSkills">
+                <h3 class="skillHead">Non-Technical Skills</h3>
+                <ul>
+                  <li>Communication</li>
+                  <li>Teamwork</li>
+                  <li>Problem-solving</li>
+                  <li>Leadership</li>
                 </ul>
-
-                <h3 id="langHeader">Tech Stack</h3>
-                <div class="languages">
-                    <div class="techs">
-                        <div class="tech-container">
-                            <img src="assets/media/about-images/tech-stack/devicon--html5.png" alt="HTML logo">
-                            <div class="progress-container" style="--progress: 66%;"></div>
-                        </div>
-
-                        <div class="tech-container">
-                            <img src="assets/media/about-images/tech-stack/devicon--css3.png" alt="CSS Logo">
-                            <div class="progress-container" style="--progress: 51%"></div>
-                        </div>
-
-                        <div class="tech-container">
-                            <img src="assets/media/about-images/tech-stack/logos--javascript.png" alt="JavaSript Logo">
-                            <div class="progress-container" style="--progress: 31%"></div>
-                        </div>
-
-                        <div class="tech-container">
-                            <img src="assets/media/about-images/tech-stack/devicon--java-wordmark.png" alt="Java Logo">
-                            <div class="progress-container" style="--progress: 39%"></div>
-                        </div>
-                    </div>
-                </div>
-                <h4 id="middle">Always Learning</h4>
+              </div>
+              <div class="interest">
+                <h3 class="skillHead">Interest / Hobbies</h3>
+                <ul>
+                  <li>Photography</li>
+                  <li>Coding</li>
+                  <li>Editing</li>
+                  <li>Casual Gaming</li>
+                </ul>
+              </div>
             </div>
+          </div>
+
+          <div class="about-details">
+            <div class="detail-block">
+              <h3 id="achv-cert">Achievements & Certificates</h3>
+              <ul class="certificates">
+                <li>
+                  <a href="assets/media/cert/CSS.pdf" target="_blank">
+                    Computer System Servicing NCII
+                    <svg class="icon" aria-hidden="true">
+                      <use href="#icon-arrow-up-right"></use>
+                    </svg>
+                  </a>
+                  <div class="cert-icons">
+                    <svg class="icon" aria-hidden="true"><use href="#icon-award"></use></svg>
+                    <svg class="icon" aria-hidden="true"><use href="#icon-cpu"></use></svg>
+                    <svg class="icon" aria-hidden="true"><use href="#icon-layers"></use></svg>
+                  </div>
+                </li>
+                <li>
+                  <a href="assets/media/cert/EPAS.pdf" target="_blank">
+                    Electronic Product Assembly and Servicing NCII
+                    <svg class="icon" aria-hidden="true">
+                      <use href="#icon-arrow-up-right"></use>
+                    </svg>
+                  </a>
+                  <div class="cert-icons">
+                    <svg class="icon" aria-hidden="true"><use href="#icon-award"></use></svg>
+                    <svg class="icon" aria-hidden="true"><use href="#icon-bolt"></use></svg>
+                    <svg class="icon" aria-hidden="true"><use href="#icon-gear"></use></svg>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="detail-block">
+              <h3 id="langHeader">Tech Stack</h3>
+              <div class="tech-groups">
+                <div class="tech-group">
+                  <h4>Frontend</h4>
+                  <ul class="tech-tags">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                </div>
+                <div class="tech-group">
+                  <h4>Programming</h4>
+                  <ul class="tech-tags">
+                    <li>Java</li>
+                  </ul>
+                </div>
+                <div class="tech-group">
+                  <h4>Practices</h4>
+                  <ul class="tech-tags">
+                    <li>Responsive design</li>
+                    <li>Accessibility</li>
+                    <li>Web APIs</li>
+                  </ul>
+                </div>
+              </div>
+              <h4 id="middle">Always Learning</h4>
+            </div>
+          </div>
+        </section>
+
+        <section class="experience section-block" id="experience">
+          <div class="section-head">
+            <span class="section-index">03 / Experience</span>
+            <h2>Where I've been</h2>
+          </div>
+          <div class="grid-container">
+            <article class="item" id="oratory">
+              <div class="details">
+                <h3>CITE Oratory Club</h3>
+                <p>
+                  <span class="item-date">September 2024 — March 2025</span>
+                </p>
+                <p class="detail-content">
+                  An active member of the club, serving our chapel and wider community, deepening my
+                  faith, developing leadership and discipline, fostering humility and compassion,
+                  and living out a life of service and dedication.
+                </p>
+              </div>
+              <div class="cert-icons">
+                <svg class="icon" aria-hidden="true"><use href="#icon-spark"></use></svg>
+                <svg class="icon" aria-hidden="true"><use href="#icon-hands"></use></svg>
+                <svg class="icon" aria-hidden="true"><use href="#icon-book"></use></svg>
+                <svg class="icon" aria-hidden="true"><use href="#icon-hands"></use></svg>
+              </div>
+            </article>
+
+            <article class="item" id="photography">
+              <div class="details">
+                <h3>CITE Photography Club</h3>
+                <p>
+                  <span class="item-date">January 2025 — March 2026</span>
+                </p>
+                <p class="detail-content">
+                  An active member of the photography club serving as an editor, responsible for
+                  enhancing photos from school events and programs, and occasionally tasked with
+                  editing videos for intros, outros, or complete 3–5 minute productions using
+                  productive tools such as CapCut.
+                </p>
+              </div>
+              <div class="cert-icons">
+                <svg class="icon" aria-hidden="true"><use href="#icon-camera"></use></svg>
+                <svg class="icon" aria-hidden="true"><use href="#icon-scissors"></use></svg>
+                <svg class="icon" aria-hidden="true"><use href="#icon-palette"></use></svg>
+                <svg class="icon" aria-hidden="true"><use href="#icon-layers"></use></svg>
+              </div>
+            </article>
+
+            <article class="item job" id="work-experience">
+              <span class="section-index">Current role</span>
+              <h3>Sun Asterisk Software Development Inc.</h3>
+              <p class="job-role">DTS Trainee / AI Product Engineer</p>
+              <p class="job-date"><span class="status-dot"></span> March 9, 2026 — Present</p>
+            </article>
+
+            <article class="item" id="education">
+              <h3>Education</h3>
+              <div class="educ-levels">
+                <div class="levels">
+                  <h4>CITE Technical Institute Inc. |</h4>
+                  <p>San Jose, Cebu City</p>
+                  <p>Diploma in Computer Engineering Technology</p>
+                  <p>August 2024 - Present</p>
+                </div>
+                <div class="levels">
+                  <h4>Alcoy National High School |</h4>
+                  <p>Alcoy, Cebu</p>
+                  <p>Senior High School, GAS Track</p>
+                  <p>Graduated w/ High Honors | May 2024</p>
+                </div>
+                <div class="levels">
+                  <h4>Alcoy National High School |</h4>
+                  <p>Alcoy, Cebu</p>
+                  <p>Junior High School</p>
+                  <p>April 2022</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </template>
+
+    <!-- Contact -->
+    <template id="view-contact">
+      <div class="contact">
+        <div class="contact-content contact-left">
+          <p class="section-index">04 / Contact</p>
+          <h2 class="display display--sm">Let's work together</h2>
+          <p class="lede">Have something in mind? Send a note and I'll get back to you.</p>
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="582ff2ad-736d-45c6-a1f1-8fc035943d0c" />
+            <div class="inputs">
+              <label for="name">Subject</label>
+              <input type="text" id="name" name="full_name" placeholder="Enter full name" />
+            </div>
+            <div class="inputs">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="Enter email address" />
+            </div>
+            <div class="inputs">
+              <label for="message">Message</label>
+              <textarea name="message" id="message" placeholder="Enter message"></textarea>
+            </div>
+            <div class="submit-button">
+              <button type="submit">Send message</button>
+            </div>
+          </form>
+          <p id="form-status" role="status" aria-live="polite"></p>
         </div>
 
-        <div class="experience" id="experience">
-            <h2>Experiences</h2>
-            <div class="grid-container">
-                <div class="item" id="oratory" style="grid-area: box-1;">
-                    <div class="details">
-                        <h3>CITE Oratory Club</h3>
-                        <p><strong><em>September 2024 -Present</em></strong></p>
-                        <p id="detail-content">An active member of the club, serving our chapel and wider community, deepening my faith,
-                            developing leadership and discipline, fostering humility and compassion, and living out a
-                            life of service and dedication.</p>
-                    </div>
-                    <div class="cert-icons">
-                        <img src="assets/media/exp-org-icons/chapel.svg" alt="chapel">
-                        <img src="assets/media/exp-org-icons/prayer.png" alt="praying hands with a cross">
-                        <img src="assets/media/exp-org-icons/bible-svgrepo-com.svg" alt="the Bible">
-                        <img src="assets/media/exp-org-icons/hands-helping-svgrepo-com.svg" alt="team">
-                    </div>
-                </div>
-
-                <div class="item" id="photography" style="grid-area: box-3;">
-                    <div class="details">
-                        <h3>CITE Photography Club</h3>
-                        <p><strong><em>January 2025 - Present</em></strong></p>
-                        <p id="detail-content">An active member of the photography club serving as an editor, responsible for enhancing
-                            photos from school events and programs, and occasionally tasked with editing videos for
-                            intros, outros, or complete 3–5 minute productions using productive tools such as CapCut.
-                        </p>
-                    </div>
-                    <div class="cert-icons">
-                        <img src="assets/media/exp-org-icons/camera-alt-1-svgrepo-com.svg" alt="camera">
-                        <img src="assets/media/exp-org-icons/capcut-svgrepo-com.svg" alt="capcut">
-                        <img src="assets/media/exp-org-icons/canva-svgrepo-com.svg" alt="canva">
-                        <img src="assets/media/exp-org-icons/photoshop-svgrepo-com.svg" alt="photoshop">
-                    </div> 
-                </div>
-            
-                <div class="item" id="work-experience" style="grid-area: box-2;">
-                    <h3>Experiences</h3>
-                    <p>No additional work experience</p>
-                </div>
-
-                <div class="item" id="education" style="grid-area: box-4;">
-                    <h3>Education</h3>
-                    <div class="educ-levels">
-                        <div class="levels">
-                            <h4>CITE Technical Institute Inc. |</h4>
-                            <p>San Jose, Cebu City</p>
-                            <p>Diploma in Computer Engineering Technology</p>
-                            <p>August 2024 - Present</p>
-                        </div>
-                        <div class="levels">
-                            <h4>Alcoy National High School |</h4>
-                            <p>Alcoy, Cebu</p>
-                            <p>Senior High School, GAS Track</p>
-                            <p>Graduated w/ High Honors | May 2024</p>
-                        </div>
-                        <div class="levels">
-                            <h4>Alcoy National High School |</h4>
-                            <p>Alcoy, Cebu</p>
-                            <p>Junior High School</p>
-                            <p>April 2022</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="contact-content contact-right">
+          <nav aria-label="Contact links">
+            <ul class="links">
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>
+                <a href="tel:+639773687370">+63 977 368 7370</a>
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg>
+                <a href="mailto:dejitoleiniar06@gmail.com">dejitoleiniar06@gmail.com</a>
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg>
+                <a
+                  href="https://www.linkedin.com/in/rainiel-dejito-b60288394"
+                  target="_blank"
+                  id="linkedIn"
+                  >Rainiel Dejito</a
+                >
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true"><use href="#icon-discord"></use></svg>
+                <a href="https://discord.com/users/1470002070445756478" target="_blank" id="discord"
+                  >Rainiel Dejito</a
+                >
+              </li>
+            </ul>
+          </nav>
         </div>
+      </div>
+    </template>
 
-        <div class="contact" id="contact">
-            <div class="contact-content contact-left">
-                <h2>Contact</h2>
-                <p>Let's work together</p>
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="582ff2ad-736d-45c6-a1f1-8fc035943d0c">
-                    <div class="inputs fifty-px">
-                        <label for="name">Subject</label>
-                        <input type="text" id="name" name="full_name" placeholder="Enter full name">
-                    </div>
-                    <div class="inputs fifty-px">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="Enter email address">
-                    </div>
-                    <div class="inputs hundredPx">
-                        <label for="message">Message</label>
-                        <textarea name="message" id="message" placeholder="Enter message"></textarea>
-                    </div>
-                    <div class="submit-button">
-                        <button type="submit">Send</button>
-                    </div>
-                </form>
-            </div>
-            <div class="contact-content contact-right">
-                <nav>
-                    <ul class="links">
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16">
-                                <g fill="#000">
-                                    <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
-                                    <path d="M8 14a1 1 0 1 0 0-2a1 1 0 0 0 0 2" />
-                                </g>
-                            </svg>
-                            <a href="tel:+639773687370">+63 977 368 7370 <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20">
-                                <g fill="#000">
-                                    <rect width="11" height="11" x="7" y="6" opacity="0.2" rx="1" />
-                                    <path d="M14.5 14.5v-3.25a.5.5 0 0 1 1 0V15a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 1 .5-.5h3.75a.5.5 0 0 1 0 1H5.5v9z" />
-                                    <path d="M10.354 10.354a.5.5 0 0 1-.708-.708l5-5a.5.5 0 0 1 .708.708z" />
-                                    <path d="M15.5 8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 1 0z" />
-                                    <path d="M11.5 5.5a.5.5 0 0 1 0-1H15a.5.5 0 0 1 0 1z" />
-                                </g>
-                            </svg></span></a>
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                                <g fill="none">
-                                    <path fill="#000" d="M3 5v-.5a.5.5 0 0 0-.5.5zm18 0h.5a.5.5 0 0 0-.5-.5zM3 5.5h18v-1H3zM20.5 5v12h1V5zM19 18.5H5v1h14zM3.5 17V5h-1v12zM5 18.5A1.5 1.5 0 0 1 3.5 17h-1A2.5 2.5 0 0 0 5 19.5zM20.5 17a1.5 1.5 0 0 1-1.5 1.5v1a2.5 2.5 0 0 0 2.5-2.5z" />
-                                    <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="m3 5l9 9l9-9" stroke-width="1" />
-                                </g>
-                            </svg>
-                            <a href="mailto:dejitoleiniar06@gmail.com">dejitoleiniar06@gmail.com <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20">
-                                <g fill="#000">
-                                    <rect width="11" height="11" x="7" y="6" opacity="0.2" rx="1" />
-                                    <path d="M14.5 14.5v-3.25a.5.5 0 0 1 1 0V15a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 1 .5-.5h3.75a.5.5 0 0 1 0 1H5.5v9z" />
-                                    <path d="M10.354 10.354a.5.5 0 0 1-.708-.708l5-5a.5.5 0 0 1 .708.708z" />
-                                    <path d="M15.5 8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 1 0z" />
-                                    <path d="M11.5 5.5a.5.5 0 0 1 0-1H15a.5.5 0 0 1 0 1z" />
-                                </g>
-                            </svg></span></a>
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                                <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
-                                    <path d="M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6zm5-1.775v.5" />
-                                    <path d="M8 16.375V10.75m4 5.625V13.5m0 0v-2.75m0 2.75c0-1.288 1.222-2 2.4-2c1.6 0 1.6 1.375 1.6 2.875v2" />
-                                </g>
-                            </svg>
-                            <a href="https://www.linkedin.com/in/rainiel-dejito-b60288394" target="_blank" id="linkedIn">Rainiel Dejito <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20">
-                                <g fill="#000">
-                                    <rect width="11" height="11" x="7" y="6" opacity="0.2" rx="1" />
-                                    <path d="M14.5 14.5v-3.25a.5.5 0 0 1 1 0V15a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 1 .5-.5h3.75a.5.5 0 0 1 0 1H5.5v9z" />
-                                    <path d="M10.354 10.354a.5.5 0 0 1-.708-.708l5-5a.5.5 0 0 1 .708.708z" />
-                                    <path d="M15.5 8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 1 0z" />
-                                    <path d="M11.5 5.5a.5.5 0 0 1 0-1H15a.5.5 0 0 1 0 1z" />
-                                </g>
-                            </svg></span></a>
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48">
-                                <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M17.59 34.173A49 49 0 0 1 14.68 38C7.3 37.79 4.5 33 4.5 33a44.8 44.8 0 0 1 4.81-19.52A16.47 16.47 0 0 1 18.69 10l1 2.31A33 33 0 0 1 24 12a33 33 0 0 1 4.33.3l1-2.31a16.47 16.47 0 0 1 9.38 3.51A44.8 44.8 0 0 1 43.5 33s-2.8 4.79-10.18 5a47 47 0 0 1-2.86-3.81m6.46-2.9c-3.84 1.945-7.555 3.89-12.92 3.89s-9.08-1.945-12.92-3.89" stroke-width="1" />
-                                <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M33.108 24.653q.271.527.352 1.058a1.5 1.5 0 0 1-.995 1.658l-3.732 1.261c-.47.16-.984-.011-1.28-.41a3.357 3.357 0 0 1 2.503-5.34c1.29-.095 2.557.625 3.153 1.773m-18.231 0q-.27.527-.352 1.058a1.5 1.5 0 0 0 .996 1.658l3.73 1.261c.472.16.985-.011 1.28-.41a3.357 3.357 0 0 0-2.503-5.34c-1.29-.095-2.556.625-3.151 1.773m21.984 1.99l-.442 1.325m2.371-2.047l-.923 2.768m2.371-2.046l-.442 1.325M8.203 26.643l-.442 1.325m2.371-2.047l-.923 2.768m2.371-2.046l-.442 1.325" stroke-width="1" />
-                            </svg>
-                            <a href="https://discord.com/users/1470002070445756478" id="discord" target="_blank">Rainiel Dejito <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20">
-                                <g fill="#000">
-                                    <rect width="11" height="11" x="7" y="6" opacity="0.2" rx="1" />
-                                    <path d="M14.5 14.5v-3.25a.5.5 0 0 1 1 0V15a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V5a.5.5 0 0 1 .5-.5h3.75a.5.5 0 0 1 0 1H5.5v9z" />
-                                    <path d="M10.354 10.354a.5.5 0 0 1-.708-.708l5-5a.5.5 0 0 1 .708.708z" />
-                                    <path d="M15.5 8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 1 0z" />
-                                    <path d="M11.5 5.5a.5.5 0 0 1 0-1H15a.5.5 0 0 1 0 1z" />
-                                </g>
-                            </svg></span></a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </main>
-</body>
-<script src="assets/js/index.js"></script>
+    <template id="view-404">
+      <section class="not-found">
+        <p class="section-index">Error / 404</p>
+        <h2 class="display display--sm">Page not found</h2>
+        <p>That page doesn't exist.</p>
+        <a class="outline-button" href="./">Back to home</a>
+      </section>
+    </template>
+
+    <footer class="site-footer">
+      <span>© 2026 Rainiel Dejito</span>
+      <ul class="footer-socials">
+        <li>
+          <a
+            href="https://www.linkedin.com/in/rainiel-dejito-b60288394"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <svg class="icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg>
+            <span>LinkedIn</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://discord.com/users/1470002070445756478"
+            target="_blank"
+            aria-label="Discord"
+          >
+            <svg class="icon" aria-hidden="true"><use href="#icon-discord"></use></svg>
+            <span>Discord</span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:dejitoleiniar06@gmail.com" aria-label="Email">
+            <svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg>
+            <span>Email</span>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
 </html>
-
-
-
