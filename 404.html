@@ -8,16 +8,21 @@
       (function () {
         var l = location;
         var route = l.pathname + l.search + l.hash;
-        var base = sessionStorage.getItem('spa-base');
 
-        if (base === null) {
-          var parts = l.pathname.split('/').filter(Boolean);
-          var isGh = l.hostname.endsWith('.github.io');
-          // GitHub project pages: /<repo>/... ; root/custom domains: /
-          base = isGh && parts.length > 1 ? '/' + parts[0] : '';
-          // Single-segment path on github.io is ambiguous; prefer root for known app routes.
-          if (isGh && parts.length === 1) base = '';
+        // Never redirect to the same kind of page again - that would loop.
+        if (/\/index\.html$/.test(l.pathname)) {
+          l.replace(l.origin + '/index.html?route=' + encodeURIComponent(route));
+          return;
         }
+
+        var parts = l.pathname.split('/').filter(Boolean);
+        var isGh = l.hostname.endsWith('.github.io');
+        var appPaths = ['about', 'contact', 'experience', 'assets', 'index.html'];
+
+        // username.github.io/<repo> -> the repo is the base.
+        // username.github.io or a custom domain -> there is no base.
+        var isProjectPage = isGh && parts.length > 1 && appPaths.indexOf(parts[1]) === -1;
+        var base = isProjectPage ? '/' + parts[0] : '';
 
         l.replace(l.origin + base + '/index.html?route=' + encodeURIComponent(route));
       })();
