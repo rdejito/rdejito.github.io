@@ -395,11 +395,6 @@ header {
   align-items: center;
   gap: clamp(24px, 4vw, 64px);
   padding: 80px var(--gutter) 110px;
-  background: radial-gradient(
-    ellipse at 78% 48%,
-    rgba(95, 168, 168, 0.09),
-    transparent 48%
-  );
   text-align: left;
 }
 
@@ -419,53 +414,16 @@ header {
 }
 
 .hero-portrait {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  isolation: isolate;
-}
-
-.hero-portrait::before,
-.hero-portrait::after {
-  position: absolute;
-  z-index: -1;
-  pointer-events: none;
-  content: "";
-}
-
-.hero-portrait::before {
-  width: min(100%, 620px);
-  height: 82%;
-  border-radius: 50%;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(95, 168, 168, 0.16),
-    rgba(95, 168, 168, 0.06) 42%,
-    transparent 72%
-  );
-  filter: blur(30px);
-}
-
-.hero-portrait::after {
-  bottom: 6%;
-  width: 62%;
-  height: 8%;
-  border-radius: 50%;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(0, 0, 0, 0.18),
-    rgba(0, 0, 0, 0.06) 48%,
-    transparent 74%
-  );
-  filter: blur(18px);
 }
 
 .hero-portrait img {
   width: 100%;
   max-width: 620px;
   height: auto;
-  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.18));
+  filter: drop-shadow(0 32px 60px rgba(23, 23, 23, 0.6));
   object-fit: contain;
 }
 
