@@ -391,9 +391,9 @@ header {
 .opening {
   display: grid;
   min-height: calc(100vh - var(--header-h));
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.9fr);
+  grid-template-columns: minmax(0, 0.85fr) minmax(340px, 1.15fr);
   align-items: center;
-  gap: clamp(32px, 5vw, 80px);
+  gap: clamp(24px, 4vw, 64px);
   padding: 80px var(--gutter) 110px;
   text-align: left;
 }
@@ -406,7 +406,7 @@ header {
 
 .opening .display {
   margin: 26px 0 30px;
-  font-size: clamp(3.2rem, 6vw, 7rem);
+  font-size: clamp(3rem, 5.6vw, 6.25rem);
 }
 
 .opening .lede {
@@ -421,9 +421,9 @@ header {
 
 .hero-portrait img {
   width: 100%;
-  max-width: 620px;
+  max-width: 820px;
   height: auto;
-  filter: drop-shadow(0 28px 55px rgba(0, 0, 0, 0.55));
+  filter: drop-shadow(0 32px 60px rgba(0, 0, 0, 0.6));
   object-fit: contain;
 }
 
@@ -1155,7 +1155,7 @@ header {
   }
 
   .hero-portrait img {
-    max-width: 460px;
+    max-width: 560px;
   }
 
   .contact-right {
