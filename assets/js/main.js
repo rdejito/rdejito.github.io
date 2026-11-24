@@ -25,6 +25,12 @@ const about = {
   mount: [],
 };
 
+const connections = {
+  template: 'view-connections',
+  title: 'Connections | Rainiel Dejito',
+  mount: [],
+};
+
 const routes = {
   '/': {
     template: 'view-home',
@@ -33,6 +39,7 @@ const routes = {
   },
   '/about': about,
   '/experience': about,
+  '/connections': connections,
   '/contact': {
     template: 'view-contact',
     title: 'Contact | Rainiel Dejito',

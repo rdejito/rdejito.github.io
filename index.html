@@ -77,6 +77,17 @@
         <path d="M8 10v6M8 7.5v.5M12 16v-3.5a2 2 0 0 1 4 0V16" />
       </symbol>
       <symbol
+        id="icon-github"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5a3 3 0 0 0-.8-2.3c2.7-.3 5.5-1.3 5.5-6a4.7 4.7 0 0 0-1.3-3.2 4.4 4.4 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 0 0-6 0C7.5 2.5 6.5 2.8 6.5 2.8a4.4 4.4 0 0 0-.1 3.2A4.7 4.7 0 0 0 5 9.2c0 4.7 2.8 5.7 5.5 6a3 3 0 0 0-.8 2.3V21" />
+      </symbol>
+      <symbol
         id="icon-discord"
         viewBox="0 0 24 24"
         fill="none"
@@ -319,6 +330,7 @@
         <ul class="navigation">
           <li><a href="./" class="nav-link">Work</a></li>
           <li><a href="about" class="nav-link">About</a></li>
+          <li><a href="connections" class="nav-link">Connections</a></li>
           <li><a href="contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
@@ -623,6 +635,12 @@
                 >
               </li>
               <li>
+                <svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg>
+                <a href="https://github.com/rdejito" target="_blank" id="github"
+                  >rdejito</a
+                >
+              </li>
+              <li>
                 <svg class="icon" aria-hidden="true"><use href="#icon-discord"></use></svg>
                 <a href="https://discord.com/users/1470002070445756478" target="_blank" id="discord"
                   >Rainiel Dejito</a
@@ -632,6 +650,118 @@
           </nav>
         </div>
       </div>
+    </template>
+
+    <!-- Connections: friends and developers I know personally -->
+    <template id="view-connections">
+      <section class="connections">
+        <p class="section-index">05 / Connections</p>
+        <h2 class="display display--sm">People I know</h2>
+        <p class="lede">
+          Friends and developers I've worked with, learned from, or just enjoy building alongside.
+          Replace these placeholders with their real details.
+        </p>
+
+        <ul class="connection-list">
+          <!-- Placeholder: replace the image, name, role, note, and link -->
+          <li class="connection-card">
+            <img
+              class="connection-image"
+              src="assets/media/connection-images/rush.png"
+              alt="Jane Doe"
+              width="64"
+              height="64"
+            />
+            <div class="connection-body">
+              <h3>Rush</h3>
+              <p class="connection-role">Backend developer</p>
+              <p class="connection-note">Met through a Discord server.</p>
+            </div>
+            <a
+              class="connection-link"
+              href="https://banacount.github.io/?page=home"
+              target="_blank"
+              aria-label="John Rushell's Portfolio"
+            >
+              <span>Portfolio</span>
+              <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg>
+            </a>
+          </li>
+
+          <li class="connection-card">
+            <img
+              class="connection-image"
+              src="assets/media/connection-images/jez.png"
+              alt="Jezreel James"
+              width="64"
+              height="64"
+            />
+            <div class="connection-body">
+              <h3>Jez</h3>
+              <p class="connection-role">Full-Stack developer / Cyber Security</p>
+              <p class="connection-note">Met through a Discord server.</p>
+            </div>
+            <a
+              class="connection-link"
+              href="https://jezcruz.github.io/"
+              target="_blank"
+              aria-label="Jezreel's Portfolio"
+            >
+              <span>Portfolio</span>
+              <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg>
+            </a>
+          </li>
+
+          <li class="connection-card">
+            <img
+              class="connection-image"
+              src="assets/media/connection-images/mav.png"
+              alt="Maverick"
+              width="64"
+              height="64"
+            />
+            <div class="connection-body">
+              <h3>Mavs</h3>
+              <p class="connection-role">-</p>
+              <p class="connection-note">Met through a Discord server.</p>
+            </div>
+            <a
+              class="connection-link"
+              href=""
+              target="_blank"
+              aria-label="Maverick's Portfolio"
+            >
+              <span>Portfolio</span>
+              <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg>
+            </a>
+          </li>
+
+          <li class="connection-card">
+            <img
+              class="connection-image"
+              src="assets/media/connection-images/mel.png"
+              alt="Mel"
+              width="64"
+              height="64"
+            />
+            <div class="connection-body">
+              <h3>Mel</h3>
+              <p class="connection-role">-</p>
+              <p class="connection-note">Met through a Discord server.</p>
+            </div>
+            <a
+              class="connection-link"
+              href="https://starter-portfolio.vercel.app/"
+              target="_blank"
+              aria-label="Mellisa's Portfolio"
+            >
+              <span>Portfolio</span>
+              <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg>
+            </a>
+          </li>
+
+        </ul>
+      </section>
     </template>
 
     <template id="view-404">
@@ -646,6 +776,16 @@
     <footer class="site-footer">
       <span>© 2026 Rainiel Dejito</span>
       <ul class="footer-socials">
+        <li>
+          <a
+            href="https://github.com/rdejito"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg>
+            <span>GitHub</span>
+          </a>
+        </li>
         <li>
           <a
             href="https://www.linkedin.com/in/rainiel-dejito-b60288394"
