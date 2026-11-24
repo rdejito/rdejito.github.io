@@ -433,8 +433,10 @@ header {
   width: 100%;
   max-width: 480px;
   height: auto;
-  filter: drop-shadow(0 28px 55px rgba(0, 0, 0, 0.45));
-  object-fit: contain;
+  border: 1px solid var(--line-soft);
+  border-radius: 18px;
+  box-shadow: 0 28px 55px rgba(0, 0, 0, 0.45);
+  object-fit: cover;
 }
 
 /* ==========================================================================
