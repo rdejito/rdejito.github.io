@@ -389,18 +389,21 @@ header {
    ========================================================================== */
 
 .opening {
-  display: grid;
+  position: relative;
+  display: flex;
   min-height: calc(100vh - var(--header-h));
-  grid-template-columns: minmax(0, 1fr) minmax(360px, 1.18fr);
   align-items: center;
-  gap: clamp(20px, 3.5vw, 56px);
-  padding: 70px var(--gutter) 100px;
-  background: radial-gradient(circle at 72% 46%, #0a0a0a 0%, #101114 46%, var(--bg) 82%);
+  overflow: hidden;
+  padding: 60px var(--gutter) 80px;
+  background: radial-gradient(ellipse at 78% 50%, #080808 0%, #0e0f12 44%, var(--bg) 78%);
   text-align: left;
 }
 
 .hero-copy {
+  position: relative;
+  z-index: 2;
   display: flex;
+  max-width: min(52vw, 660px);
   flex-direction: column;
   align-items: flex-start;
 }
@@ -412,22 +415,24 @@ header {
 }
 
 .opening .lede {
-  max-width: 560px;
+  max-width: 540px;
   margin: 0 0 34px;
 }
 
 .hero-portrait {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 0;
+  position: absolute;
+  z-index: 1;
+  right: clamp(-180px, -8vw, -40px);
+  bottom: -12vh;
+  width: clamp(620px, 82vw, 1280px);
+  pointer-events: none;
 }
 
 .hero-portrait img {
   width: 100%;
-  max-width: 760px;
+  max-width: none;
   height: auto;
-  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.75));
   object-fit: contain;
 }
 
@@ -1144,15 +1149,16 @@ header {
 @media (max-width: 900px) {
   .profile,
   .contact,
-  .experience .grid-container,
-  .opening {
+  .experience .grid-container {
     grid-template-columns: 1fr;
   }
 
   .opening {
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 36px;
     padding-top: 56px;
-    background: radial-gradient(circle at 50% 72%, #0a0a0a 0%, #101114 48%, var(--bg) 85%);
+    background: radial-gradient(circle at 50% 72%, #080808 0%, #0e0f12 48%, var(--bg) 85%);
     text-align: center;
   }
 
@@ -1161,11 +1167,20 @@ header {
   }
 
   .hero-copy {
+    max-width: none;
     align-items: center;
   }
 
+  .hero-portrait {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+  }
+
   .hero-portrait img {
-    max-width: 540px;
+    max-width: 640px;
+    margin-inline: auto;
   }
 
   .contact-right {
