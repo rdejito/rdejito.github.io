@@ -423,7 +423,7 @@ header {
   width: 100%;
   max-width: 620px;
   height: auto;
-  filter: drop-shadow(0 28px 55px rgba(0, 0, 0, 0.55));
+  filter: drop-shadow(0 28px 55px rgba(0, 0, 0, .95));
   object-fit: contain;
 }
 
