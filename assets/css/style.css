@@ -393,7 +393,7 @@ header {
   min-height: calc(100vh - var(--header-h));
   grid-template-columns: minmax(0, 1fr) minmax(300px, 0.9fr);
   align-items: center;
-  gap: clamp(24px, 4vw, 64px);
+  gap: clamp(32px, 5vw, 80px);
   padding: 80px var(--gutter) 110px;
   text-align: left;
 }
@@ -406,7 +406,7 @@ header {
 
 .opening .display {
   margin: 26px 0 30px;
-  font-size: clamp(3rem, 5.6vw, 6.25rem);
+  font-size: clamp(3.2rem, 6vw, 7rem);
 }
 
 .opening .lede {
@@ -423,7 +423,7 @@ header {
   width: 100%;
   max-width: 620px;
   height: auto;
-  filter: drop-shadow(0 32px 60px rgba(23, 23, 23, 0.6));
+  filter: drop-shadow(0 28px 55px rgba(0, 0, 0, 0.55));
   object-fit: contain;
 }
 
