@@ -1,4 +1,7 @@
 # Hi! I'm Rainiel and this is my Web Portfolio
+
+> Working on improvement in another branch (refactor/new-design)
+
 I'm currently a 2nd year Computer Engineering Technology Student in a Technical-Vocational school.
 
 My journey in web development started when I graduated in senior high school.
